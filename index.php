@@ -1,2 +1,1 @@
-Test:
-<% phpinfo() %>
+<?php phpinfo() ?>
