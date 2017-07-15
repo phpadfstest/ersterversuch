@@ -31,7 +31,7 @@ $config = array(
      *
      * SimpleSAMLphp will attempt to create this directory if it doesn't exist.
      */
-    'tempdir' => '/tmp/simplesaml',
+    'tempdir' => 'D:\local\Temp/simplesaml',
 
 
     /*
@@ -43,7 +43,7 @@ $config = array(
      * Note: The messages are logged with the DEBUG log level, so you also need to set
      * the 'logging.level' option to LOG_DEBUG.
      */
-    'debug' => false,
+    'debug' => true,
 
     /*
      * When showerrors is enabled, all error messages and stack traces will be output
