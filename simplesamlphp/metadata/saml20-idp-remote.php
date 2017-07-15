@@ -1,3 +1,4 @@
+<?php
 $metadata['http://w2k12r2.test.de/adfs/services/trust'] = array (
   'entityid' => 'http://w2k12r2.test.de/adfs/services/trust',
   'contacts' => 
@@ -57,3 +58,4 @@ $metadata['http://w2k12r2.test.de/adfs/services/trust'] = array (
     ),
   ),
 );
+?>
