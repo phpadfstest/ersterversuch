@@ -13,7 +13,7 @@ $config = array(
 
     // An authentication source which can authenticate against both SAML 2.0
     // and Shibboleth 1.3 IdPs.
-    'default-sp' => array(
+    'adfs-sp' => array(
         'saml:SP',
 
         // The entity ID of this SP.
@@ -22,11 +22,18 @@ $config = array(
 
         // The entity ID of the IdP this should SP should contact.
         // Can be NULL/unset, in which case the user will be shown a list of available IdPs.
-        'idp' => null,
+        'idp' => 'http://w2k12r2.test.de/adfs/services/trust',
 
         // The URL to the discovery service.
         // Can be NULL/unset, in which case a builtin discovery service will be used.
         'discoURL' => null,
+
+        'sign.logout' => TRUE,
+        'redirect.sign' => TRUE,
+        'assertion.encyption' => TRUE,
+
+        'privatekey' => 'my.key',
+        'certificate' => 'my.pem',
 
         /*
          * WARNING: SHA-1 is disallowed starting January the 1st, 2014.
@@ -46,7 +53,7 @@ $config = array(
          *
          * Please refer to the hosted SP configuration reference for more information.
           */
-        //'signature.algorithm' => 'http://www.w3.org/2001/04/xmldsig-more#rsa-sha256',
+        'signature.algorithm' => 'http://www.w3.org/2001/04/xmldsig-more#rsa-sha256',
 
         /*
          * The attributes parameter must contain an array of desired attributes by the SP.
